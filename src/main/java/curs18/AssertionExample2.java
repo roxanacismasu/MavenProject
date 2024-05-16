@@ -11,7 +11,7 @@ public class AssertionExample2 {
 	// 1. Hard Assertion
 	// 2. Soft Assertion
 	
-	//@Test
+	@Test
 	public void hardAssertion() {
 		System.out.println("Some code here!");
 		assertTrue(false);
@@ -20,7 +20,7 @@ public class AssertionExample2 {
 		System.out.println("Final code here");	
 	}
 	
-	@Test
+	//@Test
 	public void softAsserion() {
 		System.out.println("Some code here!");
 		SoftAssert sa = new SoftAssert();
