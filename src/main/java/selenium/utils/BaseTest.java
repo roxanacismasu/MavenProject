@@ -11,25 +11,23 @@ public class BaseTest {
 	
 	@BeforeClass
 	public void setup() {
-		//FirefoxDriver
-		//EdgeDriver
+		//FirefoxDriver()
+		//EdgeDriver()
 		//System.set.property("webdriver.chrome.driver", "path to chromedriver.exe");
-		driver = new ChromeDriver();
+		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("https://keybooks.ro/");
 		
-		
 	}
-
 	
 	@AfterClass
-	public void tearDown() throws InterruptedException{
-		Thread.sleep(5000);
+	public void tearDown() throws InterruptedException {
+		Thread.sleep(5000);//bad practice
 		//driver.close();//inchide tab-ul curent
-		driver.quit();//inchide fereastra de driver
+		driver.quit();//inchide fereastra de browser
 		
-		
-		
+	}
 		
 		
 		
